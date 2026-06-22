@@ -22,7 +22,7 @@ production-quality default implementations — so consumers wire it once and
 ship features instead of reinventing pools, migrations, and SQL builders.
 
 The library deliberately stays project-not-aware (CONST-051(B)): no
-HelixCode-specific paths, hostnames, or runtime assumptions leak in. It is
+project-specific paths, hostnames, or runtime assumptions leak in. It is
 fully standalone-testable against `:memory:` SQLite, and integrates with real
 PostgreSQL when the consumer wires a `Config` pointing at one.
 

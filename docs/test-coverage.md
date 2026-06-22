@@ -89,8 +89,8 @@ boundary is honest, not hardcoded.
 
 ## Owner / Cadence
 
-- **Owner**: Database submodule maintainer (vasic-digital). HelixCode
-  consumers MAY contribute upstream but MUST NOT inject HelixCode-specific
+- **Owner**: Database submodule maintainer (vasic-digital). Consumers MAY
+  contribute upstream but MUST NOT inject project-specific
   context (CONST-051(B)).
 - **Cadence**: ledger reviewed at every governance-cascade round; planned →
   covered transitions land as their own commits with verbatim mandate quotes
