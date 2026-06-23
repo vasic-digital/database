@@ -116,7 +116,7 @@ GOMAXPROCS=2 go test ./pkg/... -count=1 -race -short 2>&1 | tee "${EVIDENCE_DIR}
 log "Step 4: runtime Database probe (Connect → migrate → INSERT → SELECT) — locale=${LANG_FIXTURE}"
 set +e
 LANG_FIXTURE="${LANG_FIXTURE}" FIXTURE_PATH="${FIXTURE_PATH}" \
-    "${PROBE_BIN}" 2>&1 | tee "${EVIDENCE_DIR}/05-probe-normal.log"
+    "${PROBE_BIN}" 2>&1 | tee "${EVIDENCE_DIR}/05-probe-normal.log"  # bluff-scan: ok (PIPESTATUS[0] captured next line + grep -q 'PROBE PASS' assert the verdict)
 PROBE_RC=${PIPESTATUS[0]}
 set -e
 if [[ ${PROBE_RC} -ne 0 ]]; then
